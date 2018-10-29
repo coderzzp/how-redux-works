@@ -9,6 +9,4 @@ npm i
 npm start
 ```
 然后CRA会帮我们运行项目
-#### 玩法？
-看看项目里的数据流是怎么流动的，中间件是如何执行的，关于中间件的执行顺序，这里有一篇很好的[文章](https://github.com/fi3ework/blog/issues/14)推荐
-emm本来想自己写一个redux异步请求的中间件，看完redux-promise-middleware感觉也没什么好玩的，社区已经把该做的事情都做的很好了  
+
