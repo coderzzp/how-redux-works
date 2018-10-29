@@ -1,3 +1,4 @@
+//compose(A, B, C)(arg) === A(B(C(arg)))
 export default function compose(...funcs) {
   if (funcs.length === 0) {
     return arg => arg
@@ -9,3 +10,13 @@ export default function compose(...funcs) {
 
   return funcs.reduce((a, b) => (...args) => a(b(...args)))
 }
+// another method
+// export default function compose(...funcs) {
+//   if (funcs.length === 0) {
+//     return arg => arg
+//   } else {
+//     const last = funcs[funcs.length - 1]
+//     const rest = funcs.slice(0, -1)
+//     return (...args) => rest.reduceRight((composed, f) => f(composed), last(...args))
+//   }
+// }

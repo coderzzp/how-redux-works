@@ -25,8 +25,14 @@ export default connect(
   }),
   dispatch => ({
     action: ()=>{
-      dispatch((dispatch)=>{
-        dispatch({type:'ADD_CHAT',payload:1})
+      dispatch({
+        type:'ADD_CHAT',
+        payload:{
+          promise:new Promise((reslove,reject)=>{
+            setTimeout(()=>reslove('i am the server info!'),3000)
+          }),
+          data:'fuck!'
+        }
       })
     }
   })
